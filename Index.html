@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vijay Mishra - Software Developer | Laravel, PHP, MySQL, REST API | Building scalable web applications">
+    <title>Vijay Mishra | Software Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'glow': 'glow 2s ease-in-out infinite alternate',
+                        'typing': 'typing 3.5s steps(40, end)',
+                        'blink': 'blink-caret .75s step-end infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translate3d(0,0,0)' },
+                            '50%': { transform: 'translate3d(0,-20px,0)' }
+                        },
+                        glow: {
+                            '0%': { boxShadow: '0 0 20px rgba(59, 130, 246, 0.5)' },
+                            '100%': { boxShadow: '0 0 40px rgba(59, 130, 246, 0.8), 0 0 60px rgba(59, 130, 246, 0.4)' }
+                        },
+                        typing: {
+                            from: { width: '0%' },
+                            to: { width: '100%' }
+                        },
+                        blink: {
+                            '0%, 50%': { borderColor: 'transparent' },
+                            '51%, 100%': { borderColor: 'currentColor' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+       /* Replace kar dena hai existing <style> section mein ye CSS */
+
+/* Professional Black Theme */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #3b82f6 transparent;
+}
+
+*::-webkit-scrollbar {
+    width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #0a0a0a;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: #3b82f6;
+    border-radius: 4px;
+}
+
+body {
+    background: #000000 !important; /* Pure Black */
+    color: #ffffff;
+}
+
+/* Professional Glass Effect */
+.glass {
+    background: rgba(20, 20, 20, 0.8); /* Darker glass */
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+/* Subtle gradient background sections */
+.bg-white\/5 {
+    background: rgba(15, 15, 15, 0.6) !important;
+}
+
+/* Professional gradient text */
+.gradient-text {
+    background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 50%, #94a3b8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Navbar - Professional look */
+nav {
+    background: rgba(0, 0, 0, 0.9) !important;
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+/* Hero section background */
+#home {
+    background: 
+        radial-gradient(ellipse at center, rgba(59, 130, 246, 0.05) 0%, transparent 70%),
+        #000000;
+}
+
+/* Section backgrounds */
+section {
+    background: 
+        linear-gradient(180deg, 
+            rgba(10, 10, 10, 0.95) 0%, 
+            rgba(0, 0, 0, 1) 100%);
+}
+
+/* Cards - Professional dark theme */
+.glass {
+    background: rgba(17, 17, 17, 0.9);
+    border: 1px solid rgba(59, 130, 246, 0.15);
+}
+
+/* Text improvements */
+.text-gray-300 {
+    color: #d1d5db !important;
+}
+
+.text-gray-400 {
+    color: #9ca3af !important;
+}
+
+/* Buttons - Professional blue accent */
+.bg-gradient-to-r {
+    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #1d4ed8 100%) !important;
+}
+
+.hover\:from-blue-700:hover,
+.hover\:to-purple-700:hover {
+    background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #1e40af 100%) !important;
+}
+
+/* Progress bar */
+#progress {
+    background: linear-gradient(90deg, #3b82f6, #1d4ed8, #06b6d4) !important;
+}
+
+/* Input fields */
+input, textarea {
+    background: rgba(20, 20, 20, 0.9) !important;
+    border: 1px solid rgba(59, 130, 246, 0.3) !important;
+    color: #ffffff !important;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #6b7280 !important;
+}
+
+/* Footer */
+footer {
+    border-top: 1px solid rgba(59, 130, 246, 0.2) !important;
+    background: rgba(5, 5, 5, 0.95);
+}
+
+/* Loader */
+#loader {
+    background: #000000 !important;
+}
+
+/* Particles - Subtle blue */
+.particle {
+    background: rgba(59, 130, 246, 0.4);
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.3);
+}
+
+/* Skill bars */
+.bg-gray-800 {
+    background: rgba(31, 41, 55, 0.8) !important;
+}
+
+/* Timeline */
+.w-0\.5 {
+    background: linear-gradient(180deg, #3b82f6, #1d4ed8) !important;
+}
+
+/* Professional hover effects */
+.hover-lift:hover {
+    transform: translateY(-4px) scale(1.01);
+    box-shadow: 0 20px 40px rgba(59, 130, 246, 0.2);
+}
+
+/* Navbar links */
+nav a:hover {
+    color: #3b82f6 !important;
+    text-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+}
+
+/* Remove purple heavy gradients, use professional blue */
+.from-purple-500 {
+    background-color: #3b82f6 !important;
+}
+
+.to-purple-500 {
+    background-color: #1d4ed8 !important;
+}
+    </style>
+</head>
+<body class="font-inter bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900 text-white overflow-x-hidden">
+    <!-- Loading Screen -->
+    <div id="loader" class="fixed inset-0 bg-gradient-to-r from-slate-900 via-purple-900/30 to-slate-900 z-50 flex items-center justify-center">
+        <div class="w-20 h-20 border-4 border-purple-500/30 border-t-purple-500 rounded-full animate-spin"></div>
+    </div>
+
+    <!-- Particles Background -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full z-40 glass px-6 py-4 transition-all duration-300">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="text-2xl font-bold gradient-text cursor-pointer hover:scale-105 transition-transform">VM</div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="hover:text-blue-400 transition-colors font-medium">Home</a>
+                <a href="#about" class="hover:text-blue-400 transition-colors font-medium">About</a>
+                <a href="#skills" class="hover:text-blue-400 transition-colors font-medium">Skills</a>
+                <a href="#experience" class="hover:text-blue-400 transition-colors font-medium">Experience</a>
+                <a href="#projects" class="hover:text-blue-400 transition-colors font-medium">Projects</a>
+                <a href="#contact" class="hover:text-blue-400 transition-colors font-medium">Contact</a>
+            </div>
+            <button class="md:hidden">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Scroll Progress -->
+    <div class="fixed top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-purple-600 z-50" id="progress"></div>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center relative pt-20 px-6 overflow-hidden">
+        <div class="max-w-7xl mx-auto w-full px-6 text-center">
+            <div class="inline-block">
+                <div class="text-sm bg-blue-500/20 text-blue-300 px-4 py-2 rounded-full font-medium mb-8 glass">
+                    Software Developer
+                </div>
+                <h1 class="text-6xl md:text-8xl font-bold mb-6 ">
+                    Vijay Mishra
+                </h1>
+                <div class="typing-container mb-12">
+                    <span class="typing-text text-2xl md:text-4xl font-medium text-gray-300 inline-block">
+                        Building Scalable Web Applications
+                    </span>
+                    <span class="typing-cursor ml-2">|</span>
+                </div>
+                <p class="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto mb-12 leading-relaxed">
+                    Crafting robust web solutions with modern technologies. Laravel | PHP | MySQL | REST APIs
+                </p>
+                <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                    <a href="#projects" class="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold rounded-2xl hover-lift shadow-2xl transition-all duration-300">
+                        <i class="fas fa-eye mr-2"></i>View Projects
+                    </a>
+                    <a href="#contact" class="px-8 py-4 border-2 border-white/30 hover:border-white/50 text-white font-semibold rounded-2xl hover-lift glass backdrop-blur-sm transition-all duration-300">
+                        <i class="fas fa-download mr-2"></i>Download Resume
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-32 px-6 relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-24">
+                <h2 class="text-5xl md:text-7xl font-bold gradient-text mb-6">About Me</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="glass p-12 rounded-3xl hover-lift">
+                    <h3 class="text-3xl font-bold mb-6 text-white">Passionate Developer</h3>
+                    <p class="text-lg text-gray-300 leading-relaxed mb-8">
+                        With 1+ years of experience, I specialize in building scalable web applications using 
+                        modern technologies. From ERP systems to hospital management solutions, I deliver 
+                        robust, performant, and maintainable code.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="text-center p-6 glass rounded-2xl">
+                            <div class="text-3xl mb-2">1+</div>
+                            <div class="text-gray-400">Years Exp.</div>
+                        </div>
+                        <div class="text-center p-6 glass rounded-2xl">
+                            <div class="text-3xl mb-2">10+</div>
+                            <div class="text-gray-400">Projects</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="glass p-8 rounded-2xl hover-lift tech-glow">
+                        <i class="fas fa-code text-4xl text-blue-400 mb-4"></i>
+                        <h4 class="font-semibold mb-2">Full Stack</h4>
+                        <p class="text-sm text-gray-400">End-to-end development</p>
+                    </div>
+                    <div class="glass p-8 rounded-2xl hover-lift tech-glow">
+                        <i class="fas fa-database text-4xl text-purple-400 mb-4"></i>
+                        <h4 class="font-semibold mb-2">Database</h4>
+                        <p class="text-sm text-gray-400">MySQL Optimization</p>
+                    </div>
+                    <div class="glass p-8 rounded-2xl hover-lift tech-glow">
+                        <i class="fas fa-api text-4xl text-emerald-400 mb-4"></i>
+                        <h4 class="font-semibold mb-2">APIs</h4>
+                        <p class="text-sm text-gray-400">RESTful Services</p>
+                    </div>
+                    <div class="glass p-8 rounded-2xl hover-lift tech-glow">
+                        <i class="fas fa-rocket text-4xl text-orange-400 mb-4"></i>
+                        <h4 class="font-semibold mb-2">Performance</h4>
+                        <p class="text-sm text-gray-400">Optimized Code</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-32 px-6 bg-white/5 relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-24">
+                <h2 class="text-5xl md:text-7xl font-bold gradient-text mb-6">Skills</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="glass p-8 rounded-3xl hover-lift group">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center mr-4 group-hover:rotate-12 transition-transform">
+                            <i class="fas fa-server text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold">Backend</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center">
+                            <span>Laravel</span>
+                            <div class="w-24 h-2 bg-gray-800 rounded-full overflow-hidden">
+                                <div class="w-11/12 h-full bg-gradient-to-r from-blue-500 to-purple-500 rounded-full animate-pulse"></div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span>PHP</span>
+                            <div class="w-24 h-2 bg-gray-800 rounded-full overflow-hidden">
+                                <div class="w-10/12 h-full bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full"></div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span>MySQL</span>
+                            <div class="w-24 h-2 bg-gray-800 rounded-full overflow-hidden">
+                                <div class="w-9/12 h-full bg-gradient-to-r from-orange-500 to-red-500 rounded-full"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass p-8 rounded-3xl hover-lift group">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center mr-4 group-hover:rotate-12 transition-transform">
+                            <i class="fas fa-plug text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold">APIs & Architecture</h3>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4 text-center">
+                        <div class="p-4 glass rounded-xl hover-lift">
+                            <i class="fas fa-exchange-alt text-2xl text-emerald-400 mb-2 block"></i>
+                            <span class="font-medium">REST APIs</span>
+                        </div>
+                        <div class="p-4 glass rounded-xl hover-lift">
+                            <i class="fas fa-layer-group text-2xl text-purple-400 mb-2 block"></i>
+                            <span class="font-medium">MVC</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass p-8 rounded-3xl hover-lift group">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mr-4 group-hover:rotate-12 transition-transform">
+                            <i class="fab fa-github text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold">Frontend & Tools</h3>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4 text-center">
+                        <div class="p-4 glass rounded-xl hover-lift">
+                            <i class="fab fa-html5 text-2xl text-orange-500 mb-2 block"></i>
+                            <span class="font-medium">HTML/CSS</span>
+                        </div>
+                        <div class="p-4 glass rounded-xl hover-lift">
+                            <i class="fab fa-js-square text-2xl text-yellow-400 mb-2 block"></i>
+                            <span class="font-medium">JavaScript</span>
+                        </div>
+                        <div class="p-4 glass rounded-xl hover-lift">
+                            <i class="fab fa-bootstrap text-2xl text-purple-500 mb-2 block"></i>
+                            <span class="font-medium">Bootstrap</span>
+                        </div>
+                        <div class="p-4 glass rounded-xl hover-lift">
+                            <i class="fas fa-code-branch text-2xl text-gray-400 mb-2 block"></i>
+                            <span class="font-medium">Git</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-32 px-6 relative">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-24">
+                <h2 class="text-5xl md:text-7xl font-bold gradient-text mb-6">Experience</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="relative">
+                <!-- Timeline Line -->
+                <div class="absolute left-8 md:left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-blue-500 to-purple-500"></div>
+                
+                <div class="space-y-16">
+                    <div class="flex items-start md:items-center space-x-8 md:space-x-16 relative">
+                        <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-3xl flex items-center justify-center text-2xl font-bold shadow-2xl hover-lift z-10">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <div class="flex-1 glass p-8 rounded-3xl hover-lift">
+                            <div class="flex items-center mb-4">
+                                                            <h3 class="text-3xl font-bold text-white mr-4">Software Developer</h3>
+                            <span class="px-4 py-1 bg-green-500/20 text-green-400 rounded-full text-sm font-medium">Present</span>
+                            </div>
+                            <h4 class="text-2xl font-semibold mb-2 gradient-text">Yasham Software Services Pvt. Ltd.</h4>
+                            <p class="text-gray-300 text-lg mb-6 leading-relaxed">
+                                Developing enterprise-grade web applications using Laravel and modern PHP practices. 
+                                Building scalable REST APIs, optimizing MySQL databases, and delivering high-performance solutions.
+                            </p>
+                            <div class="flex flex-wrap gap-3">
+                                <span class="px-4 py-2 bg-blue-500/20 text-blue-400 rounded-xl text-sm font-medium">Laravel</span>
+                                <span class="px-4 py-2 bg-purple-500/20 text-purple-400 rounded-xl text-sm font-medium">PHP</span>
+                                <span class="px-4 py-2 bg-emerald-500/20 text-emerald-400 rounded-xl text-sm font-medium">MySQL</span>
+                                <span class="px-4 py-2 bg-orange-500/20 text-orange-400 rounded-xl text-sm font-medium">REST APIs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-32 px-6 bg-white/5 relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-24">
+                <h2 class="text-5xl md:text-7xl font-bold gradient-text mb-6">Projects</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="group glass p-8 rounded-3xl hover-lift cursor-pointer overflow-hidden relative hover:bg-white/10 transition-all duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-blue-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="relative z-10">
+                        <div class="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mb-6 group-hover:rotate-12 transition-transform duration-300">
+                            <i class="fas fa-industry text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-white group-hover:text-blue-400 transition-colors">Sunil Steel ERP</h3>
+                        <p class="text-gray-300 mb-6 leading-relaxed">
+                            Comprehensive ERP system for steel manufacturing with inventory, sales, and production management.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-8">
+                            <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-xs font-medium">Laravel</span>
+                            <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-xs font-medium">MySQL</span>
+                            <span class="px-3 py-1 bg-emerald-500/20 text-emerald-400 rounded-full text-xs font-medium">REST API</span>
+                        </div>
+                        <a href="#" class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold rounded-2xl hover-lift transition-all duration-300">
+                            <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="group glass p-8 rounded-3xl hover-lift cursor-pointer overflow-hidden relative hover:bg-white/10 transition-all duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-emerald-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="relative z-10">
+                        <div class="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center mb-6 group-hover:rotate-12 transition-transform duration-300">
+                            <i class="fas fa-hospital text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-white group-hover:text-emerald-400 transition-colors">Samda HMS</h3>
+                        <p class="text-gray-300 mb-6 leading-relaxed">
+                            Hospital Management System with patient records, appointment scheduling, and billing modules.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-8">
+                            <span class="px-3 py-1 bg-orange-500/20 text-orange-400 rounded-full text-xs font-medium">PHP</span>
+                            <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-xs font-medium">Bootstrap</span>
+                            <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-xs font-medium">MVC</span>
+                        </div>
+                        <a href="#" class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white font-semibold rounded-2xl hover-lift transition-all duration-300">
+                            <i class="fab fa-github mr-2"></i>View Code
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="group glass p-8 rounded-3xl hover-lift cursor-pointer overflow-hidden relative hover:bg-white/10 transition-all duration-500 lg:col-span-2 md:col-span-2">
+                    <div class="absolute inset-0 bg-gradient-to-t from-purple-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="relative z-10">
+                        <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mb-6 group-hover:rotate-12 transition-transform duration-300">
+                            <i class="fas fa-laptop-code text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-white group-hover:text-purple-400 transition-colors">Twendi Website Testing</h3>
+                        <p class="text-gray-300 mb-6 leading-relaxed">
+                            Automated testing platform for websites with comprehensive reporting and performance analytics.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-8">
+                            <span class="px-3 py-1 bg-emerald-500/20 text-emerald-400 rounded-full text-xs font-medium">JavaScript</span>
+                            <span class="px-3 py-1 bg-orange-500/20 text-orange-400 rounded-full text-xs font-medium">AJAX</span>
+                            <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-xs font-medium">jQuery</span>
+                            <span class="px-3 py-1 bg-gray-500/20 text-gray-400 rounded-full text-xs font-medium">Google Apps Script</span>
+                        </div>
+                        <div class="flex gap-4">
+                            <a href="#" class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold rounded-2xl hover-lift transition-all duration-300 flex-1 justify-center">
+                                <i class="fas fa-eye mr-2"></i>Live Demo
+                            </a>
+                            <a href="#" class="inline-flex items-center px-6 py-3 border-2 border-purple-500/50 hover:border-purple-400 text-purple-400 font-semibold rounded-2xl hover-lift glass backdrop-blur-sm transition-all duration-300">
+                                <i class="fab fa-github mr-2"></i>GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-32 px-6 relative">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-24">
+                <h2 class="text-5xl md:text-7xl font-bold gradient-text mb-6">Education</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass p-10 rounded-3xl hover-lift text-center group">
+                    <div class="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-500 rounded-3xl flex items-center justify-center mx-auto mb-6 text-2xl group-hover:rotate-180 transition-transform duration-500">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 gradient-text">BCA</h3>
+                    <p class="text-gray-400 mb-4 font-medium">Bachelor of Computer Applications</p>
+                    <p class="text-sm text-gray-500">PRSU University</p>
+                    <div class="mt-6 h-2 bg-gray-800 rounded-full overflow-hidden">
+                        <div class="h-full w-full bg-gradient-to-r from-blue-500 to-purple-500 rounded-full animate-pulse"></div>
+                    </div>
+                </div>
+
+                <div class="glass p-10 rounded-3xl hover-lift text-center group md:col-span-2">
+                    <div class="w-20 h-20 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-3xl flex items-center justify-center mx-auto mb-6 text-2xl group-hover:rotate-180 transition-transform duration-500">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-xl font-bold mb-2 gradient-text">12th - Science</h3>
+                            <p class="text-gray-400 mb-1">CG Board</p>
+                            <div class="h-2 bg-gray-800 rounded-full overflow-hidden">
+                                <div class="h-full w-4/5 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2 gradient-text">10th</h3>
+                            <p class="text-gray-400 mb-1">CG Board</p>
+                            <div class="h-2 bg-gray-800 rounded-full overflow-hidden">
+                                <div class="h-full w-full bg-gradient-to-r from-orange-500 to-red-500 rounded-full"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-32 px-6 bg-white/5 relative">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-24">
+                <h2 class="text-5xl md:text-7xl font-bold gradient-text mb-6">Get In Touch</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <!-- Contact Info -->
+                <div class="space-y-8">
+                    <div class="glass p-8 rounded-3xl hover-lift">
+                        <h3 class="text-2xl font-bold mb-6 gradient-text">Let's Connect</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-center space-x-4 p-4 glass rounded-2xl hover:bg-white/10 transition-all">
+                                <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center">
+                                    <i class="fas fa-envelope text-white"></i>
+                                </div>
+                                <div>
+                                    <p class="text-gray-400 text-sm">Email</p>
+                                    <a href="mailto:vijaymishra2232@gmail.com" class="font-semibold hover:text-blue-400 transition-colors">vijaymishra2232@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-4 p-4 glass rounded-2xl hover:bg-white/10 transition-all">
+                                <div class="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center">
+                                    <i class="fas fa-phone text-white"></i>
+                                </div>
+                                <div>
+                                    <p class="text-gray-400 text-sm">Phone</p>
+                                    <a href="tel:+918349479670" class="font-semibold hover:text-emerald-400 transition-colors">+91 8349479670</a>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-4 p-4 glass rounded-2xl hover:bg-white/10 transition-all">
+                                <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center">
+                                    <i class="fab fa-github text-white"></i>
+                                </div>
+                                <div>
+                                    <p class="text-gray-400 text-sm">GitHub</p>
+                                    <a href="#" class="font-semibold hover:text-purple-400 transition-colors">@vijaymishra</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="flex justify-center space-x-6 pt-8">
+                        <a href="#" class="w-16 h-16 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 rounded-3xl flex items-center justify-center text-2xl hover-lift shadow-2xl transition-all duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-16 h-16 bg-gradient-to-r from-gray-800 to-gray-700 hover:from-gray-700 hover:to-gray-600 rounded-3xl flex items-center justify-center text-2xl hover-lift shadow-2xl transition-all duration-300">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 rounded-3xl flex items-center justify-center text-2xl hover-lift shadow-2xl transition-all duration-300">
+                            <i class="fab fa-dribbble"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="glass p-12 rounded-3xl hover-lift">
+                    <h3 class="text-3xl font-bold mb-8 text-center gradient-text">Send Message</h3>
+                    <form class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-300 mb-2">Name</label>
+                                <input type="text" class="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-2xl focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition-all text-white placeholder-gray-400" placeholder="Your Name">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-300 mb-2">Email</label>
+                                <input type="email" class="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-2xl focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition-all text-white placeholder-gray-400" placeholder="your@email.com">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">Message</label>
+                            <textarea rows="5" class="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-2xl focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition-all resize-vertical text-white placeholder-gray-400" placeholder="Tell me about your project..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-4 px-8 rounded-2xl hover-lift shadow-2xl transition-all duration-300 flex items-center justify-center space-x-2">
+                            <i class="fas fa-paper-plane"></i>
+                            <span>Send Message</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 border-t border-white/10">
+        <div class="max-w-7xl mx-auto text-center">
+            <div class="text-3xl font-bold gradient-text mb-6">Vijay Mishra</div>
+            <p class="text-gray-400 mb-8">© 2024 All rights reserved. Built with ❤️ using modern web technologies.</p>
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="#" class="w-12 h-12 bg-white/10 hover:bg-white/20 rounded-2xl flex items-center justify-center text-xl hover-lift transition-all">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                                <a href="#" class="w-12 h-12 bg-white/10 hover:bg-white/20 rounded-2xl flex items-center justify-center text-xl hover-lift transition-all">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="#" class="w-12 h-12 bg-white/10 hover:bg-white/20 rounded-2xl flex items-center justify-center text-xl hover-lift transition-all">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+            <div class="text-xs text-gray-500">
+                Designed & Developed by <span class="font-semibold gradient-text">Vijay Mishra</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-8 right-8 w-14 h-14 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 rounded-3xl flex items-center justify-center text-2xl shadow-2xl hover-lift opacity-0 invisible transition-all duration-300 z-40">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script>
+        // Loading Screen
+        window.addEventListener('load', () => {
+            document.getElementById('loader').style.opacity = '0';
+            setTimeout(() => {
+                document.getElementById('loader').style.display = 'none';
+            }, 500);
+        });
+
+        // Particles Animation
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            for (let i = 0; i < 50; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.width = particle.style.height = (Math.random() * 4 + 1) + 'px';
+                particle.style.animationDelay = Math.random() * 20 + 's';
+                particle.style.animationDuration = (Math.random() * 20 + 20) + 's';
+                particlesContainer.appendChild(particle);
+            }
+        }
+        createParticles();
+
+        // Typing Animation
+        const typingTexts = [
+            "Building Scalable Web Applications",
+            "Crafting RESTful APIs",
+            "Optimizing MySQL Databases",
+            "Laravel & PHP Developer"
+        ];
+        let textIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        function typeWriter() {
+            const typingElement = document.querySelector('.typing-text');
+            const cursor = document.querySelector('.typing-cursor');
+            
+            if (isDeleting) {
+                typingElement.textContent = typingTexts[textIndex].substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typingElement.textContent = typingTexts[textIndex].substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            let typeSpeed = isDeleting ? 50 : 100;
+            
+            if (!isDeleting && charIndex === typingTexts[textIndex].length) {
+                typeSpeed = 2000;
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                textIndex = (textIndex + 1) % typingTexts.length;
+                typeSpeed = 500;
+            }
+
+            setTimeout(typeWriter, typeSpeed);
+        }
+        typeWriter();
+
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Scroll Progress
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.pageYOffset;
+            const docHeight = document.body.offsetHeight - window.innerHeight;
+            const scrollPercent = scrollTop / docHeight;
+            document.getElementById('progress').style.transform = `scaleX(${scrollPercent})`;
+        });
+
+        // Navbar Scroll Effect
+        let lastScrollTop = 0;
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('nav');
+            const scrollTop = window.pageYOffset;
+
+            if (scrollTop > 100) {
+                navbar.style.backdropFilter = 'blur(20px)';
+                navbar.style.background = 'rgba(15, 15, 35, 0.95)';
+            } else {
+                navbar.style.backdropFilter = 'blur(10px)';
+                navbar.style.background = 'rgba(255, 255, 255, 0.05)';
+            }
+
+            // Back to Top Button
+            const backToTop = document.getElementById('backToTop');
+            if (scrollTop > 500) {
+                backToTop.classList.remove('opacity-0', 'invisible');
+                backToTop.classList.add('opacity-100', 'visible');
+            } else {
+                backToTop.classList.remove('opacity-100', 'visible');
+                backToTop.classList.add('opacity-0', 'invisible');
+            }
+
+            lastScrollTop = scrollTop;
+        });
+
+        // Back to Top
+        document.getElementById('backToTop').addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Intersection Observer for Scroll Animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections and cards
+        document.querySelectorAll('section, .hover-lift').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(50px)';
+            el.style.transition = 'all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+            observer.observe(el);
+        });
+
+        // Form Submission (Frontend only)
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const button = this.querySelector('button[type="submit"]');
+            const originalText = button.innerHTML;
+            
+            button.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Sending...';
+            button.disabled = true;
+            
+            // Simulate API call
+            setTimeout(() => {
+                button.innerHTML = '<i class="fas fa-check mr-2"></i>Message Sent!';
+                setTimeout(() => {
+                    button.innerHTML = originalText;
+                    button.disabled = false;
+                    this.reset();
+                }, 2000);
+            }, 1500);
+        });
+
+        // Mouse Move Parallax (Hero Section)
+        document.addEventListener('mousemove', (e) => {
+            const hero = document.querySelector('#home');
+            const rect = hero.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            
+            const rotateX = (y - centerY) / 20;
+            const rotateY = (centerX - x) / 20;
+            
+            hero.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+        });
+
+        // Reset Hero transform on mouse leave
+        document.querySelector('#home').addEventListener('mouseleave', () => {
+            document.querySelector('#home').style.transform = 'perspective(1000px) rotateX(0) rotateY(0)';
+        });
+
+        // Add ripple effect to buttons
+        document.querySelectorAll('button, a').forEach(el => {
+            el.addEventListener('click', function(e) {
+                if (this.classList.contains('ripple')) return;
+                
+                const ripple = document.createElement('span');
+                const rect = this.getBoundingClientRect();
+                const size = Math.max(rect.width, rect.height);
+                const x = e.clientX - rect.left - size / 2;
+                const y = e.clientY - rect.top - size / 2;
+                
+                ripple.className = 'ripple';
+                ripple.style.cssText = `
+                    position: absolute;
+                    width: ${size}px;
+                    height: ${size}px;
+                    left: ${x}px;
+                    top: ${y}px;
+                    background: rgba(255,255,255,0.4);
+                    border-radius: 50%;
+                    transform: scale(0);
+                    animation: ripple 0.6s linear;
+                    pointer-events: none;
+                `;
+                
+                this.style.position = 'relative';
+                this.style.overflow = 'hidden';
+                this.appendChild(ripple);
+                
+                setTimeout(() => {
+                    ripple.remove();
+                }, 600);
+            });
+        });
+
+        // Add ripple animation CSS
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes ripple {
+                to {
+                    transform: scale(4);
+                    opacity: 0;
+                }
+            }
+            .ripple {
+                animation: ripple 0.6s linear;
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Preload images for better performance
+        const images = [
+            'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=='
+        ];
+        images.forEach(src => {
+            const img = new Image();
+            img.src = src;
+        });
+    </script>
+</body>
+</html>
